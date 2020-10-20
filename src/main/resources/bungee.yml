@@ -1,0 +1,6 @@
+name: MPVP_AntiBot
+author: specownik
+version: 1.0
+main: pl.masterpvp.specu.antibot.AntiBotPlugin
+#DISCORD >>>
+website: "specu#9040"
