@@ -24,7 +24,7 @@ public class AntiBotPlugin extends Plugin implements Listener {
 
     @EventHandler(priority = -64)
     public void onProxyPing(ProxyPingEvent event){
-        String ip = event.getConnection().getAddress().getAddress().getHostAddress();
+        String ip = event.getConnection().getAddress().getAddress().getHostAddress(); 
         if(getMap().containsKey(ip)) {
             if (getMap().get(ip) < System.currentTimeMillis()) {
                 getMap().put(ip, (System.currentTimeMillis() + (activeInSeconds * 1000L)));
