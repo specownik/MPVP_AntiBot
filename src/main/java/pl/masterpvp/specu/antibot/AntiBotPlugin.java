@@ -37,7 +37,7 @@ public class AntiBotPlugin extends Plugin implements Listener {
     @EventHandler(priority = -64)
     public void onPreLogin(PreLoginEvent event){
         String ip = event.getConnection().getAddress().getAddress().getHostAddress();
-        if(!getMap().containsKey(ip)){
+        if(!getMap().containsKey(ip) || getMap().get(ip) < System.currentTimeMillis()) {
             event.setCancelled(true);
             event.setCancelReason(color("&cAby dołączyć do serwera, musisz go dodać do listy serwerów\n" +
                     "&cNastępnie odśwież liste i dołącz do serwera!"));
